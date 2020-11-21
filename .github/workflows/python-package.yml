@@ -27,6 +27,5 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
         YAHOO_URL: ${{ secrets.YAHOO_URL }}
-        MENSAJE: ${{ secrets.MENSAJE }}
       run: |
         python main.py

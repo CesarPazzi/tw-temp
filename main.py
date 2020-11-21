@@ -68,8 +68,8 @@ if __name__ == "__main__":
     temp = GetTempC()
     clima = GetClima()
 
-    # La variable 'message' tendra el mensaje
-    message = os.environ['MENSAJE']
+    # Cambiar 'message' para adaptarlo a tu situacion
+    message = "El clima en #Reynosa #reynosafollow es '"+str(clima)+"' con una temperatura de: '"+str(temp)+"°C' ("+str(hora.hour)+":"+str(hora.minute)+"hrs.)"
 
     # Se manda el tuit con la informacion
     twitter.update_status(status=message)
