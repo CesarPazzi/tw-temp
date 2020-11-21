@@ -1,0 +1,32 @@
+name: Twitter Bot
+
+on:
+  schedule:
+    - cron:  '00 * * * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python version to 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8' 
+        architecture: 'x64' 
+    - name: INSTALANDO DEPENDENCIAS ☝
+      run: |
+        pip install twython
+        pip install beautifulsoup4
+        pip install html5lib
+    - name: TUITEANDO TEMPERATURA...
+      env:
+        CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+        CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+        YAHOO_URL: ${{ secrets.YAHOO_URL }}
+      run: |
+        python main.py
