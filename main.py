@@ -8,6 +8,7 @@ import os
 ######### GLOBALES ######### 
 
 yahoo_url = os.environ['YAHOO_URL']
+print(yahoo_url)
 
 # definimos la URL que queremos Scrapear con la variable 'url'
 url = urllib.request.urlopen(yahoo_url).read()
