@@ -17,6 +17,7 @@ pagina = bs.BeautifulSoup(url, "html5lib")
 
 # Creamos una variable para almacenar la hora actual
 hora = datetime.datetime.now()
+hora_local = int(hora.hour)-6
 
 
 ######### FUNCIONES ######### 
@@ -69,7 +70,7 @@ if __name__ == "__main__":
     clima = GetClima()
 
     # Cambiar 'message' para adaptarlo a tu situacion
-    message = "El clima en #Reynosa #reynosafollow es '"+str(clima)+"' con una temperatura de: '"+str(temp)+"°C' ("+str(hora.hour)+":"+str(hora.minute)+"hrs.)"
+    message = "El clima en #Reynosa #reynosafollow es '"+str(clima)+"' con una temperatura de: '"+str(temp)+"°C' ("+str(hora_local)+":"+str(hora.minute)+"hrs.)"
 
     # Se manda el tuit con la informacion
     twitter.update_status(status=message)
