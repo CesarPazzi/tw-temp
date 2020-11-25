@@ -1,14 +1,29 @@
 # Tw-temp
 
-Tw-temp es un Bot para Twitter que usa Beautiful Soup para adquirir la Temperatura desde Yahoo! (sin usar su API) de una ciudad en específico y mediante la API de Twitter mandar un Tweet con el dato de la Temperatura y la Hora. El Tweet lo manda de manera automatizada cada hora, todos los días.
+Tw-temp is a Twitter bot that uses Beautiful Soup to gather temperature data from Yahoo Weather page (not using Yahoo API) from a specific city. Then using Twitter's API, tweets the temperature in Celcius with Twython module at every hour using Github Actions.
 
 
+## Requirements
 
-## Requerimientos
+Tw-temp needs some dependencies for proper functionality:
 
-Tw-temp necesita de algunas dependencias para su correcto funcionamiento:
+- Beautiful Soup 4 - Web Scrapper.
+- Twython - Client for Twitter's API.
+- html5lib - HTML Parser.
 
-- Beautiful Soup 4 - Scrapper HTML.
-- Twython - Cliente para API de Twitter.
-- html5lib - Parser de HTML.
+## Usage
+
+First sign up for Twitter Developer access using https://developer.twitter.com/
+
+After forking this repo, you have to create some Github Secrets which are:
+
+- CONSUMER_KEY
+- CONSUMER_SECRET
+- ACCESS_TOKEN
+- ACCESS_TOKEN_SECRET
+- YAHOO_URL
+
+Each Secret must have the proper key generated at the Twitter's Developer page excepting the YAHOO_URL secret.
+
+The YAHOO_URL must be a Yahoo Weather URL like this one: https://es-us.noticias.yahoo.com/clima/m%C3%A9xico/tamaulipas/reynosa-24552987/ in order to work.
 
