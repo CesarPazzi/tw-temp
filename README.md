@@ -1,4 +1,4 @@
-### Preamble
+# Preamble
 
 Hello this is my own little project for learning and practicing on Python. I choose to build a weather data acquisition app because I consider them to be a easy challenge but they also have the potential to scale in a big way.
 
