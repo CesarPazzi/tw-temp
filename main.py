@@ -1,23 +1,19 @@
 import bs4 as bs
 import urllib.request
 from twython import Twython
-import datetime
+from datetime import datetime
 import os
+import pytz
 
 ######### GLOBALS ######### 
 
 yahoo_url = os.environ['YAHOO_URL']
 url = urllib.request.urlopen(yahoo_url).read()
 page = bs.BeautifulSoup(url, "html5lib")
-hour = datetime.datetime.now()
-local_hour = int(hour.hour)-5
-
-if local_hour < 0:
-    local_hour = local_hour+24
+fecha = datetime.now(pytz.timezone('US/Central'))
 
 print("------")
 print("DEBUGGING: THIS IS THE local_hour variable value:")
-print(local_hour)
 print("------")
 
 ######### FUNCTIONS ######### 
@@ -55,7 +51,7 @@ if __name__ == "__main__":
 
     temp = GetTempC()
     clima = GetClima()
-    message = "El clima en #Reynosa #reynosafollow es '"+str(clima)+"' con una temperatura de: '"+str(temp)+"°C' ("+str(local_hour)+":"+str(hour.minute)+"hrs.)"
+    message = "El clima en #Reynosa #reynosafollow es '"+str(clima)+"' con una temperatura de: '"+str(temp)+"°C' ("+fecha.strftime("%H:%M")+"hrs.)"
     twitter.update_status(status=message)
     print("Se tuiteo: %s" % message)
 
