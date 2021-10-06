@@ -1,20 +1,27 @@
-import bs4 as bs
-import urllib.request
-from twython import Twython
-from datetime import datetime
-import os
-import pytz
+print("TRYING TO IMPORT LIBRARIES")
+try:
+    import bs4 as bs
+    import urllib.request
+    from twython import Twython
+    from datetime import datetime
+    import os
+    import pytz
+
+except:
+    print("ERROR! COULD NOT IMPORT LIBRARIES")
 
 ######### GLOBALS ######### 
 
-yahoo_url = os.environ['YAHOO_URL']
-url = urllib.request.urlopen(yahoo_url).read()
-page = bs.BeautifulSoup(url, "html5lib")
-fecha = datetime.now(pytz.timezone('US/Central'))
+try:
+    yahoo_url = os.environ['YAHOO_URL']
+    url = urllib.request.urlopen(yahoo_url).read()
+    page = bs.BeautifulSoup(url, "html5lib")
+    fecha = datetime.now(pytz.timezone('US/Central'))
 
-print("------")
-print("DEBUGGING: THIS IS THE local_hour variable value:")
-print("------")
+except:
+    print("ERROR! COULD NOT SET GLOBALS")
+
+print("----------------------------------")
 
 ######### FUNCTIONS ######### 
 
@@ -48,9 +55,12 @@ twitter = Twython(
 ######### MAIN ######### 
 
 if __name__ == "__main__":
+    try:
+        temp = GetTempC()
+        clima = GetClima()
+    except:
+        print("ERROR! GetTempC() or GetClima() Failed!")
 
-    temp = GetTempC()
-    clima = GetClima()
     message = "El clima en #Reynosa #reynosafollow es '"+str(clima)+"' con una temperatura de: '"+str(temp)+"°C' ("+fecha.strftime("%H:%M")+"hrs.)"
     twitter.update_status(status=message)
     print("Se tuiteo: %s" % message)
