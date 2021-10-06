@@ -6,18 +6,19 @@ try:
     from datetime import datetime
     import os
     import pytz
+    print("DONE")
 
 except:
     print("ERROR! COULD NOT IMPORT LIBRARIES")
 
 ######### GLOBALS ######### 
-
+print("SETTING GLOBALS")
 try:
     yahoo_url = os.environ['YAHOO_URL']
     url = urllib.request.urlopen(yahoo_url).read()
     page = bs.BeautifulSoup(url, "html5lib")
     fecha = datetime.now(pytz.timezone('US/Central'))
-
+    print("DONE")
 except:
     print("ERROR! COULD NOT SET GLOBALS")
 
