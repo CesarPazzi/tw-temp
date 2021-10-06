@@ -10,7 +10,7 @@ yahoo_url = os.environ['YAHOO_URL']
 url = urllib.request.urlopen(yahoo_url).read()
 page = bs.BeautifulSoup(url, "html5lib")
 hour = datetime.datetime.now()
-local_hour = int(hour.hour)-6
+local_hour = int(hour.hour)-5
 
 if local_hour < 0:
     local_hour = local_hour+24
