@@ -128,3 +128,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Ignore this in folder, for debugging porpuses
+#Para no olvidarme de las llaves
+keys.txt
+#Solo para debuggear
+debugging.py
+#para guardar el contenido del objeto de beautiful soup.
+scrappe.txt
