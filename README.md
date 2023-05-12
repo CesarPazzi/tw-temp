@@ -40,4 +40,4 @@ The YAHOO_URL must be a Yahoo Weather URL like this one in order to work:
 ```
 https://es-us.noticias.yahoo.com/clima/méxico/tamaulipas/reynosa-24552987/
 ```
-.
+
