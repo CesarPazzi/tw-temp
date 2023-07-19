@@ -64,9 +64,9 @@ if __name__ == "__main__":
         clima = GetClima()
         message = "El clima en #Reynosa #reynosafollow es '"+str(clima)+"' con una temperatura de: '"+str(temp)+"°C' ("+fecha.strftime("%H:%M")+"hrs.)"
 
-        twitter.create_tweet(text=message)
+        response = twitter.create_tweet(text=message)
         print("Se tuiteo: %s" % message)
-        print(f"https://twitter.com/user/status/{twitter.data['id']}")
+        print(f"https://twitter.com/user/status/{response.data['id']}")
         # print("ERROR TRYING TO SEND THE TWEET!")
 
         # print("ERROR! GetTempC() or GetClima() Failed!")
