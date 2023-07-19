@@ -19,7 +19,7 @@ jobs:
         architecture: 'x64' 
     - name: INSTALLING DEPENDENCIES FIRST☝
       run: |
-        pip install twython
+        pip install tweepy
         pip install beautifulsoup4
         pip install html5lib
         pip install pytz
