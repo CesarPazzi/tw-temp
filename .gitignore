@@ -136,3 +136,4 @@ keys.txt
 debugging.py
 #para guardar el contenido del objeto de beautiful soup.
 scrappe.txt
+debug/
