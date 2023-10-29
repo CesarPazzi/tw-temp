@@ -35,7 +35,7 @@ After forking this repo, you have to create some Github Secrets which are:
 
 Each Secret must have the proper key generated at the Twitter's Developer page excepting the YAHOO_URL secret.
 
-The YAHOO_URL must be a Yahoo Weather URL like this one in order to work: 
+The YAHOO_URL must be a Yahoo Weather URL like this one in order to work.: 
 
 ```
 https://es-us.noticias.yahoo.com/clima/méxico/tamaulipas/reynosa-24552987/
