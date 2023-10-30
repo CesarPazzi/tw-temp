@@ -31,5 +31,13 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
         YAHOO_URL: ${{ secrets.YAHOO_URL }}
+        EMAIL: ${{ secrets.EMAIL }}
       run: |
         python main.py
+        message=$(date +'%Y-%m-%d-%H:%M:%S')
+        echo $message
+        git config --global user.email "$EMAIL"
+        git config --global user.name "Cesar Pazzi"
+        git add .
+        git commit -m "$message"
+        git push
