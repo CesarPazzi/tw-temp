@@ -32,6 +32,7 @@ After forking this repo, you have to create some Github Secrets which are:
 - ACCESS_TOKEN
 - ACCESS_TOKEN_SECRET
 - YAHOO_URL
+- EMAIL
 
 Each Secret must have the proper key generated at the Twitter's Developer page excepting the YAHOO_URL secret.
 
