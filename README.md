@@ -10,7 +10,7 @@ By now, IFTTT limit the tweets you can send per day to 24 and that capped me by 
 
 # Tw-temp
 
-Tw-temp is a Twitter bot that uses Beautiful Soup to gather temperature data from Yahoo Weather page (not using Yahoo API) from a specific city. Then using Twitter's API, tweets the temperature in Celcius with Twython module at every hour using Github Actions.
+Tw-temp is a Twitter bot that uses Beautiful Soup to gather temperature data from Yahoo Weather page (not using Yahoo API) from a specific city. Then using Twitter's API, tweets the temperature in Celcius with Tweepy module at every hour using Github Actions.
 
 
 ## Requirements
@@ -18,7 +18,7 @@ Tw-temp is a Twitter bot that uses Beautiful Soup to gather temperature data fro
 Tw-temp needs some dependencies for proper functionality:
 
 - Beautiful Soup 4 - Web Scrapper.
-- Twython - Client for Twitter's API.
+- Tweepy - Client for Twitter's API.
 - html5lib - HTML Parser.
 
 ## Usage
