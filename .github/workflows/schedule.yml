@@ -37,7 +37,7 @@ jobs:
         message=$(date +'%Y-%m-%d-%H:%M:%S')
         echo $message
         git config --global user.email "$EMAIL"
-        git config --global user.name "Cesar Pazzi"
+        git config --global user.name "Clima En Reynosa"
         git add .
         git commit -m "$message"
         git push
